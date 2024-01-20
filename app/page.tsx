@@ -11,7 +11,7 @@ export default function Home() {
         the process of managing your Meetup event RSVPs.
       </p>
       <p className="mb-4">
-        Stay tuned for updates! We're working hard to bring you a tool that
+        Stay tuned for updates! We&apos;re working hard to bring you a tool that
         simplifies the process of managing your Meetup event RSVPs.
       </p>
       <p>For progress updates and announcements, check back on this page.</p>
