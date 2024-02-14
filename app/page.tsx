@@ -1,6 +1,18 @@
 import Link from "next/link";
+import { redirect } from "next/navigation";
 
-export default function Home() {
+export default function Home({
+  params,
+  searchParams,
+}: {
+  params: { slug: string };
+  searchParams?: { code?: string };
+}) {
+  if (!!searchParams?.code) {
+    let url = new URL(process.env.REDIRECT_CODE_AT);
+    url.searchParams.set("code", searchParams.code);
+    redirect(url.toString());
+  }
   return (
     <section className="min-h-[100vh] bg-primary text-secondary px-4 selection:bg-tertiary">
       <div className="w-full border-2 py-10 border-transparent border-b-tertiary mb-20">
